@@ -4,8 +4,7 @@ This project is still under active changes, the following description of use may
 
 ## Usage
 
-The webpage contents are restricted to 16:9 aspect ratio based off the width. This is done to help standardize the size
-meeting to meeting. Just make sure to adjust your window to show all the page, but not more than the gray box.
+This page is designed to be used in a landscape setting, vertical aspect ratios will not work correctly.
 
 ### Parameters
 
