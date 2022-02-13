@@ -283,19 +283,20 @@ html, body {
 }
 
 .countdown-group {
-  width: 85%;
+  padding: 0 40px 0 40px;
+  width: 100%;
 }
 
 .countdown-circle {
   aspect-ratio: 1/1;
   border-radius: 50%;
   box-sizing: border-box;
-  border: 15px solid #292929;
+  border: 2vw solid #292929;
 }
 
 .digital-countdown {
   font-family: sans-serif;
-  font-size: xx-large;
+  font-size: 4vw;
   font-weight: bold;
   color: #292929;
 }
@@ -308,11 +309,11 @@ html, body {
 
 .reminders-group {
   font-family: sans-serif;
-  font-size: x-large;
+  font-size: 2vw;
   color: #292929;
 
   height: 100%;
-  padding: 0 50px 0 50px;
+  padding: 0 40px 0 40px;
 
   display: flex;
   flex-direction: column;
