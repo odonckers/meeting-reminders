@@ -61,12 +61,15 @@ canvas,
 iframe,
 img,
 svg,
+
+
 video {
-  vertical-align: middle;
+  width: 100% !important;
+  height: auto !important;
 }
 
 /*
- * Remove default fieldset styles.
+ * making video size fluid -jh
  */
 
 fieldset {

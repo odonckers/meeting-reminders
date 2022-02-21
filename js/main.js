@@ -16,6 +16,10 @@ const countDownDate = new Date(
   minute,
   seconds
 ).getTime();
+
+//defining var notTime as false boolean
+var notTime = false;
+
 const x = setInterval(function() {
   const now = new Date().getTime();
   const distance = countDownDate - now;
@@ -37,18 +41,31 @@ const x = setInterval(function() {
 
   if (isShort) {
     digitalCountdownElem.innerHTML = `${minutes * 60 + seconds}`;
+ //alert("TEST ALERT isShort if statement ran");
 
+   // document.getElementById("reminders-text").innerHTML = `
+   //   <p>The meeting is about to begin</p>
+   //   <p>Please remain muted until the meeting beings. You will need to mute and unmute yourself while commenting</p>
+   //   <p>If you choose to have your camera on, please be alert to maintain a modest appearance and background</p>
+   //   <p>Use the raise hand feature to participate</p>
+   //   `;
+
+   //if statement that's not running for some reason???
+   if (notTime === false) {
     document.getElementById("reminders-text").innerHTML = `
-      <p>The meeting is about to begin</p>
-      <p>Please remain muted until the meeting beings. You will need to mute and unmute yourself while commenting</p>
-      <p>If you choose to have your camera on, please be alert to maintain a modest appearance and background</p>
-      <p>Use the raise hand feature to participate</p>
-      `;
+    <div id="reminders-text" class="reminders-group">
+    <video autoplay muted playsinline>
+    <source src="final1.webm">
+    </div>
+    `
+    notTime = true;
+  };
   } else {
     const extraZero = seconds <= 9 ? "0" : ""
     digitalCountdownElem.innerHTML = minutes + ":" + extraZero + seconds;
+    // setting var to false in else statement
+    notTime = false;
   }
-
   if (distance < 0) {
     clearInterval(x);
     document.getElementById("digital-countdown").innerHTML = "0";
